@@ -5,9 +5,27 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_example_image</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\d3d_set_projection_thirdperson.gml</script>
+    <script>scripts\d3d_floor.gml</script>
+    <script>scripts\d3d_init.gml</script>
+    <script>scripts\scr_add_game.gml</script>
+    <script>scripts\d3d_set_projection_firstperson.gml</script>
+    <script>scripts\adjust.gml</script>
+    <script>scripts\d3d_ortho.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_name</font>
+    <font>fonts\font_description</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\obj_menu</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
   </rooms>
