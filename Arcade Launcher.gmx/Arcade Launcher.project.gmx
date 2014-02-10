@@ -9,6 +9,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_example_image</sprite>
+    <sprite>sprites\spr_images</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,6 +21,10 @@
     <script>scripts\d3d_set_projection_firstperson.gml</script>
     <script>scripts\adjust.gml</script>
     <script>scripts\d3d_ortho.gml</script>
+    <script>scripts\scr_get_name.gml</script>
+    <script>scripts\scr_get_description.gml</script>
+    <script>scripts\scr_get_screenshot.gml</script>
+    <script>scripts\scr_get_players.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_name</font>

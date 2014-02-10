@@ -1,4 +1,4 @@
-//scr_add_game(name,description,spr,subimg)
+///scr_add_game(name,description,spr,subimg)
 game_name[games] = argument0
 game_description[games] = argument1
 game_sprite[games] = argument2

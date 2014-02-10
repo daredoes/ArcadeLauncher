@@ -27,6 +27,14 @@
             <kind>1</kind>
             <string>name = "daniel";
 description = "awesome";
+scrnNum = 0;
+path = "D:\Documents\GitHub\ArcadeLauncher\The Other Branch";
+name = scr_get_name(path);
+description = scr_get_description(path);
+scr_get_screenshot(path);
+players = scr_get_players(path);
+with(obj_menu)
+scr_add_game(other.name,other.description,spr_images,other.scrnNum,other.players);
 </string>
           </argument>
         </arguments>
