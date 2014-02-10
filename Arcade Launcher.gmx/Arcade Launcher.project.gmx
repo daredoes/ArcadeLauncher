@@ -28,6 +28,7 @@
   <objects name="objects">
     <object>objects\obj_menu</object>
     <object>objects\obj_dev_controls</object>
+    <object>objects\obj_get_games</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
