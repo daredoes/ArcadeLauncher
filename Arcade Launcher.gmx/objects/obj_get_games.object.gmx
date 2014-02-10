@@ -27,18 +27,6 @@
             <kind>1</kind>
             <string>name = "daniel";
 description = "awesome";
-file = FS_file_find_first("D:\Documents\GitHub\ArcadeLauncher\*.*",fa_directory);
-FS_file_find_next();
-if(FS_directory_exists(file))
-show_message(string(file));
-FS_file_find_close();
-file2 = FS_file_find_first(file+ "\*.*",0)
-FS_file_find_next();
-    show_message(string(file2));
-FS_file_find_close();
-file3 = FS_file_find_first(file2+ "\*",0)
-show_message(string(file3));
-
 </string>
           </argument>
         </arguments>
