@@ -41,6 +41,44 @@ d3d_init()
 rz_disp = rz
 
 game_selected = 0
+
+go = 0
+
+loadstr = ""
+
+a = 0
+
+dotstr = "."
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if dotstr = "..."
+dotstr = "."
+else if dotstr = ".."
+dotstr = "..."
+else if dotstr = "."
+dotstr = ".."
+alarm[0] = 10
+
 </string>
           </argument>
         </arguments>
@@ -63,50 +101,71 @@ game_selected = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>d3d_set_projection_thirdperson()  
+            <string>if go
+    {
+    if string_length(loadstr) &lt; string_length("Loading")
+    loadstr = string_copy("Loading",1,string_length(loadstr)+1)
+    x+=1
+    z+=.1
+    if x &gt; 100 if a&lt;1 a+=.01
+    }
+if keyboard_check_pressed(vk_enter)
+if go = 0
+    {
+    alarm[0] = 6
+    go = 1
+    }
+
+d3d_set_projection_thirdperson()  
 
 for(i=0 ; i&lt;games ; i++)
-{
-if game_selected = i
-{
-draw_set_alpha(1)
-draw_set_color(c_white)
-}
+    {
+    if game_selected = i
+        {
+        draw_set_alpha(1)
+        draw_set_color(c_white)
+        }
+    else
+        {
+        draw_set_alpha(.5)
+        draw_set_color(c_gray)
+        }
+    scale = 1.2//(game_selected == i)/3+.8
+    d3d_transform_add_scaling(scale,scale,scale)
+    d3d_transform_add_translation(5,0,0)
+    d3d_transform_add_rotation_z(rz_disp + i * 360 / (games))
+    
+    d3d_draw_wall(0,1,1,0,-1,-1,tex[i],1,1)
+    d3d_transform_set_identity()
+    }
+
+if !go
+    {
+    if keyboard_check_pressed(vk_left)
+        {
+        game_selected--
+        rz += 360 / (games)
+        }
+    //
+    
+    if keyboard_check_pressed(vk_right)
+        {
+        game_selected++
+        rz -= 360 / (games)
+        }
+    }
 else
-{
-draw_set_alpha(.3)
-draw_set_color(c_gray)
-}
-scale = 1.2//(game_selected == i)/3+.8
-d3d_transform_add_scaling(scale,scale,scale)
-d3d_transform_add_translation(5,0,0)
-d3d_transform_add_rotation_z(rz_disp + i * 360 / (games))
-
-d3d_draw_wall(0,1,1,0,-1,-1,tex[i],1,1)
-d3d_transform_set_identity()
-}
-
-if keyboard_check_pressed(vk_left)
-{
-game_selected--
-rz += 360 / (games)
-}
-//
-
-if keyboard_check_pressed(vk_right)
-{
-game_selected++
-rz -= 360 / (games)
-}
-
+    {
+    rz += x
+    }
 if game_selected = games
-{
-game_selected = 0
-}
+    {
+    game_selected = 0
+    }
 if game_selected = -1
-{
-game_selected = games-1
-}
+    {
+    game_selected = games-1
+    }
 
 //
 
@@ -114,16 +173,27 @@ rz_disp = adjust(rz_disp,rz)
 
 d3d_ortho()
 
+
 draw_set_alpha(1)
 draw_set_color(c_white)
 draw_set_halign(fa_center)
 draw_set_valign(fa_center)
-draw_set_font(font_name)
-draw_text(room_width/2,96,game_name[game_selected])
-draw_set_font(font_description)
-draw_text(room_width/2,room_height-158,game_players[game_selected])
-
-draw_text(room_width/2,room_height-96,game_description[game_selected])
+draw_set_font(font_name) //96
+draw_text(room_width/2,min(96 + x*3 , room_height/2),loadstr+" "+game_name[game_selected])
+if !go
+    {
+    draw_set_font(font_description)
+    draw_text(room_width/2,room_height-158,game_players[game_selected])
+    
+    draw_text(room_width/2,room_height-96,game_description[game_selected])
+    }
+else
+    {
+    draw_text(room_width/2,room_height/2+16,dotstr)
+    }
+draw_set_alpha(a)
+draw_set_color(c_black)
+draw_rectangle(0,0,room_width,room_height,0)
 </string>
           </argument>
         </arguments>

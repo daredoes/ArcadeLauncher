@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>1125140</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>instance_create(0,0,obj_dev_controls);
 instance_create(0,0,obj_get_games);</code>
