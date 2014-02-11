@@ -101,7 +101,10 @@ alarm[0] = 10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if go
+            <string>if keyboard_check_pressed(ord("R"))
+game_restart()
+
+if go
     {
     if string_length(loadstr) &lt; string_length("Loading")
     loadstr = string_copy("Loading",1,string_length(loadstr)+1)
@@ -189,7 +192,7 @@ if !go
     }
 else
     {
-    draw_text(room_width/2,room_height/2+16,dotstr)
+    draw_text(room_width/2,room_height/2+64,dotstr)
     }
 draw_set_alpha(a)
 draw_set_color(c_black)
