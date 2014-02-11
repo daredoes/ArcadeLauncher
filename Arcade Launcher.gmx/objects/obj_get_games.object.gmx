@@ -35,6 +35,7 @@ scr_get_screenshot(path);
 players = scr_get_players(path);
 with(obj_menu)
 scr_add_game(other.name,other.description,spr_images,other.scrnNum,other.players);
+show_message(string(parameter_string(0)));
 </string>
           </argument>
         </arguments>
