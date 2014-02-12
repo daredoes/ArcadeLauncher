@@ -25,6 +25,7 @@
     <script>scripts\scr_get_description.gml</script>
     <script>scripts\scr_get_screenshot.gml</script>
     <script>scripts\scr_get_players.gml</script>
+    <script>scripts\scr_get_game_details.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_name</font>
@@ -38,6 +39,9 @@
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
   </rooms>
+  <constants number="1">
+    <constant name="mainPath">working_directory</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

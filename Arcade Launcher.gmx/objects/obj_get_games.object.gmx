@@ -28,14 +28,19 @@
             <string>name = "daniel";
 description = "awesome";
 scrnNum = 0;
-path = "D:\Documents\GitHub\ArcadeLauncher\The Other Branch";
-name = scr_get_name(path);
-description = scr_get_description(path);
-scr_get_screenshot(path);
-players = scr_get_players(path);
+path = mainPath;
+path += FS_file_find_first(mainPath+ "\*",0);
+path = mainPath + FS_file_find_next();
+path = mainPath + FS_file_find_next();
+path = mainPath + FS_file_find_next();
+path = mainPath + FS_file_find_next();
+path = mainPath + FS_file_find_next();
+path = mainPath + FS_file_find_next();
+path = mainPath + FS_file_find_next();
+scr_get_game_details(path);
+show_message(path);
 with(obj_menu)
 scr_add_game(other.name,other.description,spr_images,other.scrnNum,other.players);
-show_message(string(parameter_string(0)));
 </string>
           </argument>
         </arguments>
