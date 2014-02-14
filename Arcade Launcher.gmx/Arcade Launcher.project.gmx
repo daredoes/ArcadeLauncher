@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="4" name="datafiles">
+    <datafile>
+      <name>OpenExe.dll</name>
+      <exists>-1</exists>
+      <size>10240</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>OpenExe.dll</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions>
     <extension index="0">extensions\GMFileSystem</extension>
   </NewExtensions>
@@ -27,6 +46,8 @@
     <script>scripts\scr_get_players.gml</script>
     <script>scripts\scr_get_game_details.gml</script>
     <script>scripts\scr_set_path.gml</script>
+    <script>scripts\init_open_exe.gml</script>
+    <script>scripts\open_exe.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_name</font>

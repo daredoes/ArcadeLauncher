@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>instance_create(0,0,obj_dev_controls);
+  <code>init_open_exe();
+instance_create(0,0,obj_dev_controls);
 instance_create(0,0,obj_get_games);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

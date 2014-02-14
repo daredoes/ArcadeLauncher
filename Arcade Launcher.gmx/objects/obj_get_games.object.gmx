@@ -34,11 +34,14 @@ folder= FS_file_text_open_read(mainPath + "\folders.txt");
 while(title != "")
 {
 title= string(FS_file_text_read_string(folder));
+FS_file_text_readln(folder);
 scr_set_path(title);
 scr_get_game_details(path);
 with(obj_menu)
 scr_add_game(other.name,other.description,spr_images,other.scrnNum,other.players);
 }   
+FS_file_text_close(folder);
+open_exe("\The Other Branch\launch.exe");
 </string>
           </argument>
         </arguments>
