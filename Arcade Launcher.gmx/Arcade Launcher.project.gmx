@@ -50,6 +50,7 @@
     <script>scripts\init_open_exe.gml</script>
     <script>scripts\open_exe.gml</script>
     <script>scripts\folders_to_array.gml</script>
+    <script>scripts\find_exe_open.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_name</font>

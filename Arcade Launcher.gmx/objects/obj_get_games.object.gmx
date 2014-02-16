@@ -30,7 +30,6 @@ description = "awesome";
 scrnNum = 0;
 path = mainPath;
 title = "a";
-folder= FS_file_text_open_read(mainPath + "\folders.txt");
 folders_to_array();
 for(a = 0; a &lt; array_length_1d(folders);a++)
 {
@@ -39,42 +38,9 @@ scr_set_path(title);
 scr_get_game_details(path);
 if(name != "")
 with(obj_menu)
-scr_add_game(other.name,other.description,spr_images,other.scrnNum,other.players);
+scr_add_game(other.name,other.description,spr_images,other.scrnNum,other.players, other.title);
 }   
-FS_file_text_close(folder);
 //open_exe("\The Other Branch\launch.exe");
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(window_has_focus())
-{
-    if(!window_get_fullscreen())
-    window_set_fullscreen(1);
-}
-else
-{
-    if(window_get_fullscreen())
-    window_set_fullscreen(0);
-}
 </string>
           </argument>
         </arguments>
