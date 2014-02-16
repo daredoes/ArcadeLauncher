@@ -4,6 +4,6 @@ game_description[games] = argument1
 game_sprite[games] = argument2
 game_players[games]=argument4
 game_folder[games] = argument5
-tex[games] = sprite_get_texture(game_sprite[0],argument3)
+tex[games] = sprite_get_texture(argument2,argument3)
 games++
 

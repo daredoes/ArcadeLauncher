@@ -1,2 +1,6 @@
 ///scr_get_screenshot(path)
-FS_sprite_sprite_replace(spr_images,argument0 + "\screenshot.png",scrnNum,false,false,0,0);
+spritePath = file_find_first(argument0 + "\*.png",0);
+sprite = sprite_add(argument0 + "\" + spritePath,1,0,0,0,0);
+file_find_close();
+return sprite;
+
