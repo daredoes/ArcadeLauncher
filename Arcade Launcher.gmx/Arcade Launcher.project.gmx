@@ -23,7 +23,8 @@
     </datafile>
   </datafiles>
   <NewExtensions>
-    <extension index="0">extensions\GMFileSystem</extension>
+    <extension index="0">extensions\Game Appearance</extension>
+    <extension index="1">extensions\GMFileSystem</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -48,6 +49,7 @@
     <script>scripts\scr_set_path.gml</script>
     <script>scripts\init_open_exe.gml</script>
     <script>scripts\open_exe.gml</script>
+    <script>scripts\folders_to_array.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_name</font>
