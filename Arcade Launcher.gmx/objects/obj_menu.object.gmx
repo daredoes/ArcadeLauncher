@@ -26,15 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>games = 0
-/*
-scr_add_game("Pac Man","Eat dots and avoid ghosts",spr_example_image,0,"1-2 Players","")
-scr_add_game("Asteroids","Shoot and dodge asteroids",spr_example_image,1,"1-2 Players","")
-scr_add_game("Platformer","Jump on blocks and don't land on spikes",spr_example_image,2,"1-2 Players, 3-4 Player with Cabinet Multiplayer","")
-scr_add_game("Pong","Don't let the ball hit your side!",spr_example_image,3,"1-2 Players","")
-scr_add_game("Monster Trucks","Race across rugged terrain in giant wheeled monster trucks",spr_example_image,4,"1-2 Players","")
-scr_add_game("Star Wars Battlefront II","Indisputably the most epic 3D shooter game ever made",spr_example_image,5,"1-4 Players, 1-32 Players with Online Multiplayer","")
-scr_add_game("Battlefield III","Not nearly as awesome as Star Wars Battlefront II, however has nice graphics.",spr_example_image,6,"Single Player, Online Multiplayer if you're rich.","")
- */
+
+scr_add_game("Game Dev Launcher","Games created by the Game Development Club at SJSU",spr_example_image,0,"1-2 Players","")
+
+ 
 launched = false;
 d3d_init()
 
