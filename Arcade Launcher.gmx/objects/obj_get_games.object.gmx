@@ -42,6 +42,8 @@ with(obj_menu)
 scr_add_game(other.name,other.description,other.sprite,0,other.players, other.title);
 }   
 //open_exe("\The Other Branch\launch.exe");
+yo = window_get_active();
+//show_message(yo);
 </string>
           </argument>
         </arguments>
