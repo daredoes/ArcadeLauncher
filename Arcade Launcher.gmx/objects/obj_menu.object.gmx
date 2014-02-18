@@ -188,13 +188,13 @@ for(i=0 ; i&lt;games ; i++)
         }
     else
         {
-        draw_set_alpha(.5)
+        draw_set_alpha(1)
         draw_set_color(c_gray)
         }
     scale = 1.2//(game_selected == i)/3+.8
     d3d_transform_add_scaling(scale,scale,scale)
-    radius = games
-    d3d_transform_add_translation(5+(game_selected == i)*1+radius,0,0)
+    radius = games / 2.2
+    d3d_transform_add_translation(1+(game_selected == i)*1+radius,0,0)
     d3d_transform_add_rotation_z(rz_disp + i * 360 / (games))
     d3d_transform_add_translation(-radius,0,0)
     d3d_draw_wall(0,1,1,0,-1,-1,tex[i],1,1)
