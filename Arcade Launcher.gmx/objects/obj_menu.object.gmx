@@ -148,6 +148,13 @@ alarm[0] = 10
             <string>if keyboard_check_pressed(ord("R"))
 game_restart()
 
+if keyboard_check_pressed(ord("Y"))
+{
+scr_add_game("Game Dev Launcher","Games created by the Game Development Club at SJSU",spr_example_image,0,"1-2 Players","")
+rz = 0
+game_selected = 0
+}
+
 if go
     {
     if string_length(loadstr) &lt; string_length("Loading")
@@ -182,9 +189,10 @@ for(i=0 ; i&lt;games ; i++)
         }
     scale = 1.2//(game_selected == i)/3+.8
     d3d_transform_add_scaling(scale,scale,scale)
-    d3d_transform_add_translation(5+(game_selected == i)*1,0,0)
+    radius = games
+    d3d_transform_add_translation(5+(game_selected == i)*1+radius,0,0)
     d3d_transform_add_rotation_z(rz_disp + i * 360 / (games))
-    
+    d3d_transform_add_translation(-radius,0,0)
     d3d_draw_wall(0,1,1,0,-1,-1,tex[i],1,1)
     d3d_transform_set_identity()
     }
