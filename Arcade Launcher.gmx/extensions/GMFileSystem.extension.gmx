@@ -33,6 +33,17 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</license>
 Filesystem improvements</description>
   <helpfile></helpfile>
   <installdir></installdir>
+  <classname></classname>
+  <androidclassname></androidclassname>
+  <sourcedir></sourcedir>
+  <androidsourcedir></androidsourcedir>
+  <macsourcedir></macsourcedir>
+  <maclinkerflags></maclinkerflags>
+  <androidinject></androidinject>
+  <iosSystemFrameworks/>
+  <iosThirdPartyFrameworks/>
+  <androidPermissions/>
+  <IncludedResources/>
   <files>
     <file>
       <filename>GMFile.dll</filename>

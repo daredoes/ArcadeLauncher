@@ -8,6 +8,17 @@
   <description>This DLL-based extension package contains additional, advanced GML functions to control the game window and its taskbar button. It also supports showing Windows message boxes and playing system sounds.</description>
   <helpfile>Game Appearance.chm</helpfile>
   <installdir></installdir>
+  <classname></classname>
+  <androidclassname></androidclassname>
+  <sourcedir></sourcedir>
+  <androidsourcedir></androidsourcedir>
+  <macsourcedir></macsourcedir>
+  <maclinkerflags></maclinkerflags>
+  <androidinject></androidinject>
+  <iosSystemFrameworks/>
+  <iosThirdPartyFrameworks/>
+  <androidPermissions/>
+  <IncludedResources/>
   <files>
     <file>
       <filename>GameAppearance.dll</filename>
